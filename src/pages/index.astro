@@ -3,38 +3,63 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Hey">
-	<main>
-		<div class="container">
-			<div class="coding">
-				<a href="https://makesign.github.io/">
-					<img class="link" src="makesign(1).png">
-				</a>
-			</div>
-			<div class="stuff">
-				<a href="stuff">
-					<img class="link" src="stuff.png">
-				</a>
-			</div>
-			<div class="sofa">
-				<a href="sofa">
-					<img class="link" src="sofa.png">
-				</a>
-			</div>
-		</div>
-	</main>
+    <main>
+        <div class="header-container">
+			<a href="/">
+            <h1 >Nemo Ziener</h1>
+			</a>
+			<a href="contact">
+            <h1 class="sofa-text">Contact</h1>
+			</a>
+        </div>
+        <hr class="horizontal">
+        <hr class="vertikal">
+        <div class="container">
+            <div class="coding">
+                <a href="https://makesign.github.io/">
+                    <img class="link" src="makesign(1).png">
+                </a>
+            </div>
+            <div class="stuff">
+                <a href="stuff">
+                    <img class="link" src="stuff.png">
+                </a>
+            </div>
+            <div class="sofa">
+                <a href="sofa">
+                    <img class="link" src="sofa.png">
+                </a>
+            </div>
+        </div>
+    </main>
 </Layout>
 
 <style>
-	.container {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		grid-gap: 1rem;
-	}
-	.link{
-		width: 100%;
-	}
-	.link:hover {
-		transform: scale(1.1);
-		filter:invert();
-	}
+    .header-container {
+        background-image: url('/carpet-blue.png'); /* Pfad zum Hintergrundbild */
+        background-size: cover; /* Bildgröße anpassen */
+        background-position: center; /* Bild zentrieren */
+        display: flex;
+        justify-content: space-between; /* Space out the items */
+        align-items: center; /* Align items vertically in the center */
+        padding: 1rem; /* Optional padding */
+    }
+    h1 {
+        font-size: 2rem;
+        margin: 0;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1rem;
+        margin: 0;
+        padding: 0;
+    }
+    .link {
+        width: 100%;
+    }
+    .link:hover {
+        transform: scale(1.1);
+        filter: invert();
+    }
 </style>

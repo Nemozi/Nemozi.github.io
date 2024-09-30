@@ -1,0 +1,85 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Contact">
+    <main>
+        <div class="header-container">
+            <a href="/">
+                <h1>Nemo Ziener</h1>
+            </a>
+            <a href="contact">
+                <h1 class="sofa-text">Contact</h1>
+            </a>
+        </div>
+        <hr class="horizontal">
+        <hr class="vertikal">
+        <div class="contact-container">
+            <h1>Reach me via:</h1>
+            <h2><a href="mailto:Nemo.Ziener@proton.me">Nemo.Ziener@proton.me</a></h2>
+            <h2><a href="https://www.linkedin.com/in/nemo-ziener" target="_blank" rel="noopener noreferrer">LinkedIn: www.linkedin.com/in/nemo-ziener</a></h2>
+            <h2><a href="https://www.github.com/Nemozi" target="_blank" rel="noopener noreferrer">GitHub: www.github.com/Nemozi</a></h2>
+        </div>
+    </main>
+</Layout>
+
+<style>
+    html, body {
+        background-size: cover; /* Ensure the background image covers the entire frame */
+        background-position: center; /* Center the background image */
+        background-repeat: no-repeat; /* Prevent the background image from repeating */
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+    }
+    .header-container {
+        background-image: url('/carpet-blue.png'); /* Pfad zum Hintergrundbild */
+        background-size: cover; /* Bildgröße anpassen */
+        background-position: center; /* Bild zentrieren */
+        display: flex;
+        justify-content: space-between; /* Space out the items */
+        align-items: center; /* Align items vertically in the center */
+        padding: 1rem; /* Optional padding */
+    }
+    .contact-container {
+        text-align: left;
+        padding: 2rem;
+        color: black; /* Set text color to black */
+    }
+    h1 {
+        font-size: 2rem;
+        margin: 0;
+        color: black; /* Set text color to black */
+    }
+    .contact-container h1 {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+    }
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: black; /* Set text color to black */
+        text-align: left;
+        margin-left: 5rem;
+        font-family: links;
+    }
+    a {
+        color: black; /* Set link color to black */
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+    .horizontal {
+        border-bottom: 1vh solid #000000;
+        margin-bottom: 10vh;
+        margin-top: 0;
+    }
+    .vertikal {
+        border-left: 1vh solid #000000;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+    }
+</style>
