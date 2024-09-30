@@ -25,6 +25,8 @@ import Layout from '../layouts/Layout.astro';
 
 <style>
     html, body {
+        background-image: url('/carpet-bg.png');
+        background-color: #f2e8fa;
         background-size: cover; /* Ensure the background image covers the entire frame */
         background-position: center; /* Center the background image */
         background-repeat: no-repeat; /* Prevent the background image from repeating */
@@ -41,9 +43,10 @@ import Layout from '../layouts/Layout.astro';
         justify-content: space-between; /* Space out the items */
         align-items: center; /* Align items vertically in the center */
         padding: 1rem; /* Optional padding */
+        flex-wrap: wrap; /* Allow items to wrap on smaller screens */
     }
     .contact-container {
-        text-align: left;
+        text-align: center;
         padding: 2rem;
         color: black; /* Set text color to black */
     }
@@ -53,15 +56,15 @@ import Layout from '../layouts/Layout.astro';
         color: black; /* Set text color to black */
     }
     .contact-container h1 {
-        font-size: 4rem;
+        font-size: 3rem; /* Adjust font size for better readability on mobile */
         margin-bottom: 1rem;
     }
     h2 {
-        font-size: 2rem;
+        font-size: 1.5rem; /* Adjust font size for better readability on mobile */
         margin-bottom: 1rem;
         color: black; /* Set text color to black */
         text-align: left;
-        margin-left: 5rem;
+        margin-left: 1rem; /* Reduce margin for mobile */
         font-family: links;
     }
     a {
@@ -81,5 +84,22 @@ import Layout from '../layouts/Layout.astro';
         height: 100vh;
         position: absolute;
         top: 0;
+    }
+    @media (max-width: 768px) {
+        .header-container {
+            flex-direction: column; /* Stack items vertically on smaller screens */
+            text-align: center;
+        }
+        .contact-container h1 {
+            font-size: 2.5rem; /* Further adjust font size for smaller screens */
+        }
+        h2 {
+            font-size: 1.2rem; /* Further adjust font size for smaller screens */
+            margin-left: 0; /* Remove left margin for smaller screens */
+            text-align: center; /* Center text on smaller screens */
+        }
+        .horizontal, .vertikal {
+            display: none; /* Hide lines on smaller screens */
+        }
     }
 </style>

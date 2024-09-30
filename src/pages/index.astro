@@ -5,12 +5,12 @@ import Layout from '../layouts/Layout.astro';
 <Layout title="Hey">
     <main>
         <div class="header-container">
-			<a href="/">
-            <h1 >Nemo Ziener</h1>
-			</a>
-			<a href="contact">
-            <h1 class="sofa-text">Contact</h1>
-			</a>
+            <a href="/">
+                <h1>Nemo Ziener</h1>
+            </a>
+            <a href="contact">
+                <h1 class="sofa-text">Contact</h1>
+            </a>
         </div>
         <hr class="horizontal">
         <hr class="vertikal">
@@ -35,6 +35,17 @@ import Layout from '../layouts/Layout.astro';
 </Layout>
 
 <style>
+    html, body {
+        background-image: url('/carpet-bg.png');
+        background-color: #f2e8fa;
+        background-size: cover; /* Ensure the background image covers the entire frame */
+        background-position: center; /* Center the background image */
+        background-repeat: no-repeat; /* Prevent the background image from repeating */
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+    }
     .header-container {
         background-image: url('/carpet-blue.png'); /* Pfad zum Hintergrundbild */
         background-size: cover; /* Bildgröße anpassen */
@@ -43,6 +54,7 @@ import Layout from '../layouts/Layout.astro';
         justify-content: space-between; /* Space out the items */
         align-items: center; /* Align items vertically in the center */
         padding: 1rem; /* Optional padding */
+        flex-wrap: wrap; /* Allow items to wrap on smaller screens */
     }
     h1 {
         font-size: 2rem;
@@ -61,5 +73,31 @@ import Layout from '../layouts/Layout.astro';
     .link:hover {
         transform: scale(1.1);
         filter: invert();
+    }
+    .horizontal {
+        border-bottom: 1vh solid #000000;
+        margin-bottom: 10vh;
+        margin-top: 0;
+    }
+    .vertikal {
+        border-left: 1vh solid #000000;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+    }
+    @media (max-width: 768px) {
+        .header-container {
+            flex-direction: column; /* Stack items vertically on smaller screens */
+            text-align: center;
+        }
+        h1 {
+            font-size: 1.5rem; /* Adjust font size for better readability on mobile */
+        }
+        .container {
+            grid-template-columns: 1fr; /* Stack items vertically on smaller screens */
+        }
+        .horizontal, .vertikal {
+            display: none; /* Hide lines on smaller screens */
+        }
     }
 </style>
