@@ -26,48 +26,38 @@ import Layout from '../layouts/Layout.astro';
 <style>
     html, body {
         background-color: #f2e8fa;
-        background-size: cover; /* Ensure the background image covers the entire frame */
-        background-position: center; /* Center the background image */
-        background-repeat: no-repeat; /* Prevent the background image from repeating */
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat; 
         padding: 0;
         margin: 0;
         height: 100%;
         width: 100%;
     }
-    .header-container {
-        background-image: url('/carpet-blue.png'); /* Pfad zum Hintergrundbild */
-        background-size: cover; /* Bildgröße anpassen */
-        background-position: center; /* Bild zentrieren */
-        display: flex;
-        justify-content: space-between; /* Space out the items */
-        align-items: center; /* Align items vertically in the center */
-        padding: 1rem; /* Optional padding */
-        flex-wrap: wrap; /* Allow items to wrap on smaller screens */
-    }
     .contact-container {
-        text-align: center;
+        text-align: left;
         padding: 2rem;
-        color: black; /* Set text color to black */
+        color: black;
     }
     h1 {
         font-size: 2rem;
         margin: 0;
-        color: black; /* Set text color to black */
+        color: black; 
     }
     .contact-container h1 {
-        font-size: 3rem; /* Adjust font size for better readability on mobile */
+        font-size: 3rem;
         margin-bottom: 1rem;
     }
     h2 {
-        font-size: 1.5rem; /* Adjust font size for better readability on mobile */
+        font-size: 1.5rem; 
         margin-bottom: 1rem;
-        color: black; /* Set text color to black */
+        color: black; 
         text-align: left;
-        margin-left: 1rem; /* Reduce margin for mobile */
+        margin-left: 1rem; 
         font-family: links;
     }
     a {
-        color: black; /* Set link color to black */
+        color: black; 
         text-decoration: none;
     }
     a:hover {
@@ -86,19 +76,19 @@ import Layout from '../layouts/Layout.astro';
     }
     @media (max-width: 768px) {
         .header-container {
-            flex-direction: column; /* Stack items vertically on smaller screens */
+            flex-direction: column; 
             text-align: center;
         }
         .contact-container h1 {
-            font-size: 2.5rem; /* Further adjust font size for smaller screens */
+            font-size: 2.5rem; 
         }
         h2 {
-            font-size: 1.2rem; /* Further adjust font size for smaller screens */
-            margin-left: 0; /* Remove left margin for smaller screens */
-            text-align: center; /* Center text on smaller screens */
+            font-size: 1.2rem; 
+            margin-left: 0; 
+            text-align: center;
         }
         .horizontal, .vertikal {
-            display: none; /* Hide lines on smaller screens */
+            display: none; 
         }
     }
 </style>
